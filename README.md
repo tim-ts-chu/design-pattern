@@ -73,6 +73,9 @@ First, we have different sorts of beverage with different costs. There are some 
 ### Applications
 * credential access -> check credential before each access action
 * cache -> check database before each access action
+* Logging -> log before enter a function and after leave a function
+* Timing -> get timestamp before and after a function and then get time cost
+* lock -> acquire lock before do things
 
 Factory Pattern
 ---------------
