@@ -17,9 +17,9 @@ Strategy Pattern
 Strategy pattern is that we try to find out the changed parts, and encapsulate it. This pattern make the core algorithms be alternated easily without effecting the current program which is not related with changed parts.
 
 ### Rules
-1. Encapsulate changed parts
-2. Use composition more, inheritance less
-3. Write program based on interface instead of implementation
+1. **Encapsulate changed parts**
+2. **Use composition more, inheritance less**
+3. **Write program based on interface instead of implementation**
 
 ### Example
 A duck example:
@@ -53,9 +53,23 @@ There is an subject in the example named weather. The subject is responsible for
 Decorator Pattern
 -----------------
 ### Definition
+Decorator means wrappers of a function or class, and make them have addtional behavior. It is allowed to change the behavior completely, but usually decorator dose the decorating job, meaning that it add more function and keep the object's original purpose.
+
 ### Rules
+1. Encapsulate changed parts
+2. Use composition more, inheritance less
+3. Write program based on interface instead of implementation
+4. Loosen the coupling between objects
+5. **Class should be open for expanding and close for protection of unchange part**
+
 ### Example
+A beverage example:
+First, we have different sorts of beverage with different costs. There are some condiment can "decorate" the original beverage. After decorating, the beverage is endowed with new taste, new cost, and new a description.
+![Beverage diagram](decorator_pattern/decorator_pattern.png)
+
 ### Applications
+* credential access -> check credential before each access action
+* cache -> check database before each access action
 
 Factory Pattern
 ---------------
@@ -77,9 +91,9 @@ The example is quite simple. We only implement a singleton class and make sure t
 ![Singleton diagram](singleton_pattern/singleton_pattern.png)
 
 ### Applications
-* Global variable/function/flag
-* Single handler
-* Request sender (avoid to login everytime)
+* global variable/function/flag
+* single handler
+* request sender (avoid to login everytime)
 
 
 
