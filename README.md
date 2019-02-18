@@ -1,15 +1,17 @@
-# Design Pattern
+Design Pattern
+==============
 Exercises of design pattern in Python
 
-## Table of Content
+Table of Content
+----------------
 
 * [Strategy Pattern](#strategy-pattern)
-* [Oberver Pattern](observer_pattern/README.md)
+* [Oberver Pattern](#observer-pattern)
 * Decorator Pattern
 * Factory Pattern
-* [Singleton Pattern](singleton_pattern/README.md)
+* [Singleton Pattern](#singleton-pattern)
 
-## Strategy Pattern
+Strategy Pattern
 -------------------
 ### Definition
 Strategy pattern is that we try to find out the changed parts, and encapsulate it. This pattern make the core algorithms be alternated easily without effecting the current program which is not related with changed parts.
@@ -28,7 +30,7 @@ Here we design a duck abstract class with two kinds of abilities (algorithm), th
 * neuron network -> activation function
 * read/write -> compression algorithm
 
-## Observer Pattern
+Observer Pattern
 -------------------
 ### Definition
 Observer pattern is that when we have one writer and many readers, then we can use observer pattern to realize it.
@@ -48,19 +50,21 @@ There is an subject in the example named weather. The subject is responsible for
 * task progress
 * event driven pattern -> if one event comes, subject broadcast to all listeners.
 
-## Decorator Pattern
+Decorator Pattern
+-----------------
 ### Definition
 ### Rules
 ### Example
 ### Applications
 
-## Factory Pattern
+Factory Pattern
+---------------
 ### Definition
 ### Rules
 ### Example
 ### Applications
 
-## Singleton Pattern
+Singleton Pattern
 --------------------
 ### Definition
 Singleton pattern is that we only have a unique instance for a class in a runtime.
