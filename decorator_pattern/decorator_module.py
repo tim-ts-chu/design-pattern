@@ -26,8 +26,11 @@ class Decaf(Beverage):
     _description = 'Decaf'
     _cost = 1.05
 
-# Here we use class decorator, and another way is using function decorator
+# Here we use decorating class because of the advantage of inheritance
+# The another way is using decorating function
 class CondimentDecorator(metaclass=abc.ABCMeta):
+    _description = 'Unknown Condiment'
+    _cost = 0
     def __init__(self, decorator_target):
         self.target = decorator_target
 

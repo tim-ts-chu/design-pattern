@@ -66,7 +66,7 @@ def main():
     b = WhipSoyDecaf()
     print(b.getDescription())
     print(b.cost())
-    
+
     print("===============")
     b = WhipSoyMochaDarkRoast()
     print(b.getDescription())

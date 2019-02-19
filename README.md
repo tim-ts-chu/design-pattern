@@ -42,7 +42,7 @@ Observer pattern is that when we have one writer and many readers, then we can u
 3. Write program based on interface instead of implementation
 4. **Loosen the coupling between objects**
 
-## Example
+### Example
 A weather example:
 There is an subject in the example named weather. The subject is responsible for getting the weather data from other class and maintaining the registration of observers. There could be many observers for different purpose, but all of them have to register to subject in order to receive the updated weather data.
 
