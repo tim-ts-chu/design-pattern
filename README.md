@@ -97,7 +97,7 @@ A pizza store example:
 In the example, there is a general pizza class providing the basic steps of making it. The pizza store uses a absract factory method called createPizza to get a general pizza object for a standard cooking process. However, the actual behavior could different for each pizza according to its read subclass.
   
 Furthermore, there is a abstract factory class called ingredient factory. The ingredient factory has a general interface to control all the creation of all the family conponent.
-![Factory method](factory_pattern/factory_method.png)
+![Factory method](factory_pattern/factory_pattern.png)
 
 
 ### Applications
