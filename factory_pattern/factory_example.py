@@ -1,18 +1,20 @@
-#!/usr/bin/Python3
+#!/usr/bin/python3
 
 import factory_module
 
-ny_store = factory_module.NYPizzaStore()
-
-pizza = ny_store.order('Chieese')
-pizza = ny_store.order('Veggie')
-
-chicago_store = factory_module.ChicagoPizzaStore()
-
-pizza = chicago_store.order('Clam')
-
 def main():
     print('Hello pizza world')
+    ny_store = factory_module.NYPizzaStore()
+
+    pizza = ny_store.orderPizza('Chieese')
+    print('Get pizza:', pizza.show())
+    pizza = ny_store.orderPizza('Veggie')
+    print('Get pizza:', pizza.show())
+
+    chicago_store = factory_module.ChicagoPizzaStore()
+
+    pizza = chicago_store.orderPizza('Clam')
+    print('Get pizza:', pizza.show())
 
 if __name__ == '__main__':
     main()

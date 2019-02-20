@@ -3,12 +3,12 @@ import abc
 
 class PizzaStore(abc.ABC):
     # This method is so called factory method
-    @abc.abstractmehtod
+    @abc.abstractmethod
     def createPizza(self, flavor):
         pass
 
     def orderPizza(self, flavor):
-        pizza = createPizza(flavor)
+        pizza = self.createPizza(flavor)
         pizza.prepare()
         pizza.bake()
         pizza.cut()
@@ -25,6 +25,7 @@ class NYPizzaStore(PizzaStore):
             pizza = NYClamPizza()
         else:
             pizza = NYVeggiePizza()
+        return pizza
 
 class ChicagoPizzaStore(PizzaStore):
     # factory mehtod implementation
@@ -36,6 +37,7 @@ class ChicagoPizzaStore(PizzaStore):
             pizza = ChicagoClamPizza()
         else:
             pizza = ChicagoVeggiePizza()
+        return pizza
 
 class Pizza(abc.ABC):
     @abc.abstractmethod
@@ -47,6 +49,8 @@ class Pizza(abc.ABC):
         print('pizza is cutting...')
     def box(self):
         print('pizza is boxing...')
+    def show(self):
+        return self.__class__.__name__
 
 class NYCheesePizza(Pizza):
     def prepare(self):
@@ -60,7 +64,7 @@ class NYVeggiePizza(Pizza):
 class ChicagoCheesePizza(Pizza):
     def prepare(self):
         print('prepared a Chicago Cheeese flavor pizza')
-class ChicagoClam(Pizza):
+class ChicagoClamPizza(Pizza):
     def prepare(self):
         print('prepared a Chicago Clam flavor pizza')
 class ChicagoVeggiePizza(Pizza):
