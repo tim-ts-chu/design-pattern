@@ -80,9 +80,25 @@ First, we have different sorts of beverage with different costs. There are some 
 Factory Pattern
 ---------------
 ### Definition
+* Factory methods: a method which can return a general class object having different implementation deceiding by the sub class
+
 ### Rules
+1. Encapsulate changed parts
+2. Use composition more, inheritance less
+3. Write program based on interface instead of implementation
+4. Loosen the coupling between objects
+5. Class should be open for expanding and close for protection of unchange part
+6. Depends on abstarct class instead of concrete class
+
 ### Example
+A pizza store example:
+In the example, there is a general pizza class providing the basic steps of making it. The pizza store uses a absract factory method called createPizza to get a general pizza object for a standard cooking process. However, the actual behavior could different for each pizza according to its read subclass.
+![Factory method](factory_pattern/factory_method.png)
+
+
+
 ### Applications
+* Transfer Agent -> each provide the same transfer concept, but has different implementation
 
 Singleton Pattern
 --------------------
@@ -103,4 +119,10 @@ The example is quite simple. We only implement a singleton class and make sure t
 * request sender (avoid to login everytime)
 
 
+Command Pattern
+---------------
+### Definition
+### Rules
+### Example
+### Applications
 
