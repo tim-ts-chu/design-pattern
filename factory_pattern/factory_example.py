@@ -6,7 +6,7 @@ def main():
     print('Hello pizza world')
     ny_store = factory_module.NYPizzaStore()
 
-    pizza = ny_store.orderPizza('Chieese')
+    pizza = ny_store.orderPizza('Cheese')
     print('Get pizza:', pizza.show())
     pizza = ny_store.orderPizza('Veggie')
     print('Get pizza:', pizza.show())

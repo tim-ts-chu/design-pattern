@@ -8,8 +8,9 @@ Table of Content
 * [Strategy Pattern](#strategy-pattern)
 * [Oberver Pattern](#observer-pattern)
 * [Decorator Pattern](#decorator-pattern)
-* Factory Pattern
+* [Factory Pattern](#factory-pattern)
 * [Singleton Pattern](#singleton-pattern)
+* Command Pattern
 
 Strategy Pattern
 -------------------
@@ -81,6 +82,7 @@ Factory Pattern
 ---------------
 ### Definition
 * Factory methods: a method which can return a general class object having different implementation deceiding by the sub class
+* Abstract Factory: an abstract class describes a product family and includes a set of factory methods for construct family products.
 
 ### Rules
 1. Encapsulate changed parts
@@ -88,13 +90,14 @@ Factory Pattern
 3. Write program based on interface instead of implementation
 4. Loosen the coupling between objects
 5. Class should be open for expanding and close for protection of unchange part
-6. Depends on abstarct class instead of concrete class
+6. **Depends on abstarct class instead of concrete class**
 
 ### Example
 A pizza store example:
 In the example, there is a general pizza class providing the basic steps of making it. The pizza store uses a absract factory method called createPizza to get a general pizza object for a standard cooking process. However, the actual behavior could different for each pizza according to its read subclass.
+  
+Furthermore, there is a abstract factory class called ingredient factory. The ingredient factory has a general interface to control all the creation of all the family conponent.
 ![Factory method](factory_pattern/factory_method.png)
-
 
 
 ### Applications
