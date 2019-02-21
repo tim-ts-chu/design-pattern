@@ -109,6 +109,12 @@ Singleton Pattern
 Singleton pattern is that we only have a unique instance for a class in a runtime.
 
 ### Rules
+1. Encapsulate changed parts
+2. Use composition more, inheritance less
+3. Write program based on interface instead of implementation
+4. Loosen the coupling between objects
+5. Class should be open for expanding and close for protection of unchange part
+6. Depends on abstarct class instead of concrete class
 
 ### Example
 A thread singleton example:
@@ -123,6 +129,28 @@ The example is quite simple. We only implement a singleton class and make sure t
 
 
 Command Pattern
+---------------
+### Definition
+Users can send different command requests regardless how those command actual work. So the command pattern loose the tie between the user and commands and keep the flexibility of extanding more different commands in the future.
+
+### Rules
+1. Encapsulate changed parts
+2. Use composition more, inheritance less
+3. Write program based on interface instead of implementation
+4. Loosen the coupling between objects
+5. Class should be open for expanding and close for protection of unchange part
+6. Depends on abstarct class instead of concrete class
+
+### Example
+A remote controller example:
+The remote controller is an interface between users and commands. Users only need to know how to use the remote controller and don't have to know the implementation of commands. Further, the controller can decide how to execute the command or even "when" to execute the command.
+![command pattern](command_pattern/command_pattern.png)
+
+
+### Applications
+* job queue -> user send different tasks requests without knowing how those tasks work and job queue decideds when to execute them.
+
+Adapter Pattern
 ---------------
 ### Definition
 ### Rules
