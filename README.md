@@ -188,7 +188,7 @@ Facade pattern provide a unified interface to access a group of interfaces in a 
 7. **Talk to intimate friends, not friend's friends**
 
 ### Example
-![facade_pattern](facade_pattern/facade_patter.png)
+![facade_pattern](facade_pattern/facade_pattern.png)
 Because this pattern is quite simple, here only show the class diagram without using an example.
 
 ### Applications
