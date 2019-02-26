@@ -10,7 +10,10 @@ Table of Content
 * [Decorator Pattern](#decorator-pattern)
 * [Factory Pattern](#factory-pattern)
 * [Singleton Pattern](#singleton-pattern)
-* Command Pattern
+* [Command Pattern](#command-pattern)
+* [Adapter Pattern](#adapter-pattern)
+* [Facade Pattern](#facade-pattern)
+* [Template Method Pattern](#template-method-pattern)
 
 Strategy Pattern
 -------------------
@@ -146,14 +149,57 @@ A remote controller example:
 The remote controller is an interface between users and commands. Users only need to know how to use the remote controller and don't have to know the implementation of commands. Further, the controller can decide how to execute the command or even "when" to execute the command.
 ![command pattern](command_pattern/command_pattern.png)
 
-
 ### Applications
 * job queue -> user send different tasks requests without knowing how those tasks work and job queue decideds when to execute them.
 
 Adapter Pattern
 ---------------
 ### Definition
+Once there is an old or exsiting library/subsystem, and now the main system have to cowork with the library/subsystem. However, the interfaces between exsisting library and main system are different, and then we can create an adapter as the interface converter for old or exsiting library, and use it without modifying it.
+
 ### Rules
+1. Encapsulate changed parts
+2. Use composition more, inheritance less
+3. Write program based on interface instead of implementation
+4. Loosen the coupling between objects
+5. Class should be open for expanding and close for protection of unchange part
+6. Depends on abstarct class instead of concrete class
+
 ### Example
+![adapter pattern](adapter_pattern/adapter_pattern.png)
+Because this pattern is quite straightforward, here only show the class diagram without using an example.
+
+### Applications
+* using c library in python -> need an adaptor to wrapper interface
+* using third party library -> may not change the library e.g. VMware VDDK
+
+Facade Pattern
+---------------
+### Definition
+Facade pattern provide a unified interface to access a group of interfaces in a subsystem. Besides, facade pattern set up a higher level interface to make thoses subsystem more easily be used.
+
+### Rules
+1. Encapsulate changed parts
+2. Use composition more, inheritance less
+3. Write program based on interface instead of implementation
+4. Loosen the coupling between objects
+5. Class should be open for expanding and close for protection of unchange part
+6. Depends on abstarct class instead of concrete class
+7. **Talk to intimate friends, not friend's friends**
+
+### Example
+![facade_pattern](facade_pattern/facade_patter.png)
+Because this pattern is quite simple, here only show the class diagram without using an example.
+
+### Applications
+* controller e.g. backup controller -> controll many subsystem to finish the backup operation
+
+Template Method Pattern
+---------------
+### Definition
+### Rules
+
+### Example
+
 ### Applications
 
