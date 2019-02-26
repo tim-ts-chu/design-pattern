@@ -166,8 +166,9 @@ Once there is an old or exsiting library/subsystem, and now the main system have
 6. Depends on abstarct class instead of concrete class
 
 ### Example
-![adapter pattern](adapter_pattern/adapter_pattern.png)
 Because this pattern is quite straightforward, here only show the class diagram without using an example.
+
+![adapter pattern](adapter_pattern/adapter_pattern.png)
 
 ### Applications
 * using c library in python -> need an adaptor to wrapper interface
@@ -188,8 +189,9 @@ Facade pattern provide a unified interface to access a group of interfaces in a 
 7. **Talk to intimate friends, not friend's friends**
 
 ### Example
-![facade_pattern](facade_pattern/facade_pattern.png)
 Because this pattern is quite simple, here only show the class diagram without using an example.
+
+![facade_pattern](facade_pattern/facade_pattern.png)
 
 ### Applications
 * controller e.g. backup controller -> controll many subsystem to finish the backup operation
