@@ -215,7 +215,7 @@ In template method pattern, we can define an algorithm framework in a method cal
 ### Example
 The duck sort example provide quick sort algorithm to sort objects, but different objects could have different ways to be compared. Therefore, template provides comparision hook for different object to define their own comparison method, and template will decided how or when to use it.
 
-![facade_pattern](facade_pattern/facade_pattern.png)
+![template method pattern](template_method_pattern/template_method_pattern.png)
 
 ### Applications
 neural network -> activate function can be replaced by different function
