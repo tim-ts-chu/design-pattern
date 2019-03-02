@@ -14,6 +14,7 @@ Table of Content
 * [Adapter Pattern](#adapter-pattern)
 * [Facade Pattern](#facade-pattern)
 * [Template Method Pattern](#template-method-pattern)
+* [Iterator Pattern](#iterator-pattern)
 
 Strategy Pattern
 -------------------
@@ -93,7 +94,7 @@ Factory Pattern
 3. Write program based on interface instead of implementation
 4. Loosen the coupling between objects
 5. Class should be open for expanding and close for protection of unchange part
-6. **Depends on abstarct class instead of concrete class**
+6. **Depend on abstarct class instead of concrete class**
 
 ### Example
 A pizza store example:
@@ -117,7 +118,7 @@ Singleton pattern is that we only have a unique instance for a class in a runtim
 3. Write program based on interface instead of implementation
 4. Loosen the coupling between objects
 5. Class should be open for expanding and close for protection of unchange part
-6. Depends on abstarct class instead of concrete class
+6. Depend on abstarct class instead of concrete class
 
 ### Example
 A thread singleton example:
@@ -142,7 +143,7 @@ Users can send different command requests regardless how those command actual wo
 3. Write program based on interface instead of implementation
 4. Loosen the coupling between objects
 5. Class should be open for expanding and close for protection of unchange part
-6. Depends on abstarct class instead of concrete class
+6. Depend on abstarct class instead of concrete class
 
 ### Example
 A remote controller example:
@@ -163,7 +164,7 @@ Once there is an old or exsiting library/subsystem, and now the main system have
 3. Write program based on interface instead of implementation
 4. Loosen the coupling between objects
 5. Class should be open for expanding and close for protection of unchange part
-6. Depends on abstarct class instead of concrete class
+6. Depend on abstarct class instead of concrete class
 
 ### Example
 Because this pattern is quite straightforward, here only show the class diagram without using an example.
@@ -185,8 +186,8 @@ Facade pattern provide a unified interface to access a group of interfaces in a 
 3. Write program based on interface instead of implementation
 4. Loosen the coupling between objects
 5. Class should be open for expanding and close for protection of unchange part
-6. Depends on abstarct class instead of concrete class
-7. **Talk to intimate friends, not friend's friends**
+6. Depend on abstarct class instead of concrete class
+7. **Use object methods, not mehtod's mtheod**
 
 ### Example
 Because this pattern is quite simple, here only show the class diagram without using an example.
@@ -197,6 +198,30 @@ Because this pattern is quite simple, here only show the class diagram without u
 * controller e.g. backup controller -> controll many subsystem to finish the backup operation
 
 Template Method Pattern
+---------------
+### Definition
+In template method pattern, we can define an algorithm framework in a method called template method, and howerer, some steps or core algorithms are allow to be modified according to different usage. These parts can use hook or inheritance to replace.
+
+### Rules
+1. Encapsulate changed parts
+2. Use composition more, inheritance less
+3. Write program based on interface instead of implementation
+4. Loosen the coupling between objects
+5. Class should be open for expanding and close for protection of unchange part
+6. Depend on abstarct class instead of concrete class
+7. Use object methods, not mehtod's mtheod
+8. **Do not call algorithms inside teamplate, template method will call these method**
+
+### Example
+The duck sort example provide quick sort algorithm to sort objects, but different objects could have different ways to be compared. Therefore, template provides comparision hook for different object to define their own comparison method, and template will decided how or when to use it.
+
+![facade_pattern](facade_pattern/facade_pattern.png)
+
+### Applications
+neural network -> activate function can be replaced by different function
+system upstart -> provide startup hook and shutdown hook to different application
+
+Iterator Pattern
 ---------------
 ### Definition
 ### Rules
