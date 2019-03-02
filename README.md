@@ -218,8 +218,8 @@ The duck sort example provide quick sort algorithm to sort objects, but differen
 ![template method pattern](template_method_pattern/template_method_pattern.png)
 
 ### Applications
-neural network -> activate function can be replaced by different function
-system upstart -> provide startup hook and shutdown hook to different application
+* neural network -> activate function can be replaced by different function
+* system upstart -> provide startup hook and shutdown hook to different application
 
 Iterator Pattern
 ---------------
