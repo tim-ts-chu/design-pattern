@@ -15,6 +15,7 @@ Table of Content
 * [Facade Pattern](#facade-pattern)
 * [Template Method Pattern](#template-method-pattern)
 * [Iterator Pattern](#iterator-pattern)
+* [Composition Pattern](#composition-pattern)
 
 Strategy Pattern
 -------------------
@@ -224,9 +225,32 @@ The duck sort example provide quick sort algorithm to sort objects, but differen
 Iterator Pattern
 ---------------
 ### Definition
+Iterator pattern help program to iterate every elements in a aggregation without knowing how the aggregation is implemented.
+
 ### Rules
+1. Encapsulate changed parts
+2. Use composition more, inheritance less
+3. Write program based on interface instead of implementation
+4. Loosen the coupling between objects
+5. Class should be open for expanding and close for protection of unchange part
+6. Depend on abstarct class instead of concrete class
+7. Use object methods, not mehtod's mtheod
+8. Do not call algorithms inside teamplate, template method will call these method
+9. **Only one reason or responsibility can make class be changed**
 
 ### Example
+Here is an example of iterator pattern. A waitress has to print items of menus, but menus has different implementation. One is implemented using list and the another is done by dictionary. In order to make the waitress show all items from different types of menus, we let all menus provide it own iterator from a unified iterator interface. By doing so, waitress have no longer to know the implementation of menus.
+
+![iterator pattern](iterator_pattern/iterator_pattern.png)
 
 ### Applications
+* STL containers will provide its own iterator -> e.g. list, vector, map
+* In Python, we can use "yeild" to make object "for"able (can use for to iterate)
+* all kinds of containers -> list, queue etc.
 
+Composition Pattern
+---------------
+### Definition
+### Rules
+### Example
+### Applications
