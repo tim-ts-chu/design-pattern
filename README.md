@@ -16,6 +16,7 @@ Table of Content
 * [Template Method Pattern](#template-method-pattern)
 * [Iterator Pattern](#iterator-pattern)
 * [Composition Pattern](#composition-pattern)
+* [State Pattern](#state-pattern)
 
 Strategy Pattern
 -------------------
@@ -251,6 +252,33 @@ Here is an example of iterator pattern. A waitress has to print items of menus, 
 Composition Pattern
 ---------------
 ### Definition
+When the aggregations have hierarchical relationship in between, the composition pattern is introduced. The pattern use tree structure to represent the hierarchy and allow a aggregation may have sub-aggregation. Moreover, nodes should provide traverse function for going through all nodes effectively.
+
+### Rules
+1. Encapsulate changed parts
+2. Use composition more, inheritance less
+3. Write program based on interface instead of implementation
+4. Loosen the coupling between objects
+5. Class should be open for expanding and close for protection of unchange part
+6. Depend on abstarct class instead of concrete class
+7. Use object methods, not mehtod's mtheod
+8. Do not call algorithms inside teamplate, template method will call these method
+9. Only one reason or responsibility can make class be changed
+
+### Example
+Continuing from the above waitress example, now the menus become more complicated and have sub-menus. Hence, we change our pattern to composition pattern and make traverse function take a hook function for printing items.
+
+![composition pattern](composition_pattern/composition_pattern.png)
+
+### Applications
+* file tree -> file system
+* snapshot -> in virtual machine, the snapshot should be a tree structure because new branch can be create after reverting
+
+State Pattern
+---------------
+### Definition
 ### Rules
 ### Example
 ### Applications
+
+
