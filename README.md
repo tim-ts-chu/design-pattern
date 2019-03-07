@@ -17,6 +17,7 @@ Table of Content
 * [Iterator Pattern](#iterator-pattern)
 * [Composition Pattern](#composition-pattern)
 * [State Pattern](#state-pattern)
+* [Proxy Pattern](#proxy-pattern)
 
 Strategy Pattern
 -------------------
@@ -277,8 +278,33 @@ Continuing from the above waitress example, now the menus become more complicate
 State Pattern
 ---------------
 ### Definition
+This pattern is a way to realize a finite state machine. A state machine is sutable for a long process to track which stages it has been though. Further state machines also can be use to represent the result of user actions. In the pattern, we separate the outside context and states, encapsulating states, besides also making states trigger context method as ia transition state.
+
+### Rules
+1. Encapsulate changed parts
+2. Use composition more, inheritance less
+3. Write program based on interface instead of implementation
+4. Loosen the coupling between objects
+5. Class should be open for expanding and close for protection of unchange part
+6. Depend on abstarct class instead of concrete class
+7. Use object methods, not mehtod's mtheod
+8. Do not call algorithms inside teamplate, template method will call these method
+9. Only one reason or responsibility can make class be changed
+
+### Example
+A gumball machine can interact with users with different respond according to different status. Although it exposes four actions for each state, only three is meaning full because we have make "dispense" as a continuouse action and make "SoldState" and "WinnerState" as transition states.
+
+![state machine](state_pattern/state_machine.png)
+![state pattern](state_pattern/state_pattern.png)
+
+### Applications
+* backup jobs -> long process, has several stages, can interact with users in different stages
+* backup tasks -> job can end in different result causing different status left
+
+Proxy Pattern
+---------------
+### Definition
 ### Rules
 ### Example
 ### Applications
-
 
