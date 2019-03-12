@@ -1,8 +1,8 @@
 Design Pattern
 ==============
-Exercises of design pattern in Python
+This repository is used for documenting personal learning notes and exercises of design pattern in Python. These notes and examples can refer to the book "Head First Design Patterns." However, the book uses Java to demonstration the idea, but I prefer to use Python to practice, so I try to modify some examples in order to fit Python style. Besides the definition, rules, and examples documents, I also write down some addtinoal possible applications of each pattern based on my personal experience of being a software engineer.
 
-Note: the diagram used in the document is not real UML. It is just a illustration for easily understanding.
+Note: the diagram used in the document is not real UML. It is just a easily illustration what each example is going on and the idea behind them.
 
 Table of Content
 ----------------
