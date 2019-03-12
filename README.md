@@ -2,6 +2,8 @@ Design Pattern
 ==============
 Exercises of design pattern in Python
 
+Note: the diagram used in the document is not real UML. It is just a illustration for easily understanding.
+
 Table of Content
 ----------------
 
@@ -304,7 +306,25 @@ A gumball machine can interact with users with different respond according to di
 Proxy Pattern
 ---------------
 ### Definition
+The proxy pattern means that we create a proxy object for an original object which exists on remote site or has complicated inter-process communication. So this proxy provides the same interfaces of the original object, but instead of doing things the original object do, it wrappers an RPC or IPC to pass the command to the origianl object and then receive the execution result.
+
 ### Rules
+1. Encapsulate changed parts
+2. Use composition more, inheritance less
+3. Write program based on interface instead of implementation
+4. Loosen the coupling between objects
+5. Class should be open for expanding and close for protection of unchange part
+6. Depend on abstarct class instead of concrete class
+7. Use object methods, not mehtod's mtheod
+8. Do not call algorithms inside teamplate, template method will call these method
+9. Only one reason or responsibility can make class be changed
+
 ### Example
+In this example, we use a python module Pyro to realize the proxy pattern, and use the previsou gumball example as illustration. Therefore, before executing proxy_pattern.py, we have to launch pyro_server.py to start a remote server, and then proxy_pattern.py will create a proxy object which connects to remote object. Later, we can use this proxy to control the remote one.
+![proxy pattern](proxy_pattern/proxy_pattern.png)
+
 ### Applications
+* autotest server & slave -> server controll tester's proxy to conduct tests
+
+
 
